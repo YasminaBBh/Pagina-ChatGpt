@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Creativa</title>
+    <style>
+        /* Reset de márgenes y padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradiente colorido */
+            color: #fff;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px 0;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff7e5f;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ff7e5f;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        section {
+            padding: 80px 20px;
+            background-color: #fff;
+            color: #333;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        section img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ff7e5f;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #feb47b;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            font-size: 1.1em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Efectos de animación en la carga */
+        header h1, section h2 {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        header h1 {
+            animation-delay: 0.5s;
+        }
+
+        section h2 {
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Estilo de imagen de fondo */
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background: url('https://via.placeholder.com/1600x900') no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        /* Media query para pantallas pequeñas */
+        @media (max-width: 768px) {
+            section {
+                padding: 50px 10px;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            nav a {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Imagen de fondo de bienvenida -->
+    <div class="hero-image"></div>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Bienvenidos a Mi Página Creativa</h1>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#services">Servicios</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+    <!-- Sección principal -->
+    <section id="home">
+        <h2>Descubre la Magia de lo Digital</h2>
+        <p>Transformamos tus ideas en experiencias digitales inolvidables. Creamos diseños visualmente impresionantes y funcionales.</p>
+        <img src="https://via.placeholder.com/1200x600" alt="Imagen Creativa">
+        <a href="#contact" class="cta-button">Contáctanos</a>
+    </section>
+
+    <!-- Sección sobre nosotros -->
+    <section id="about" style="background-color: #f7f7f7;">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos un equipo de diseñadores y desarrolladores apasionados por la creatividad y la innovación. Nuestro objetivo es hacer crecer tu presencia digital con soluciones únicas y personalizadas.</p>
+    </section>
+
+    <!-- Sección de servicios -->
+    <section id="services">
+        <h2>Servicios</h2>
+        <p>Ofrecemos servicios como diseño web, branding, desarrollo de aplicaciones, y más. Trabajamos contigo para dar vida a tu visión.</p>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contact" style="background-color: #333; color: white;">
+        <h2>Contacto</h2>
+        <p>¿Listo para comenzar tu proyecto? ¡Estamos aquí para ayudarte! Envíanos un mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Página Web Creativa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
